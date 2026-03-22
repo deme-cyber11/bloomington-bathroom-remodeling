@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bloomingtonbathroomremodeling.com/sitemap.xml
