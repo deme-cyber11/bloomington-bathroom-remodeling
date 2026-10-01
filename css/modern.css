@@ -425,3 +425,23 @@ body.dm .blog-date { color: var(--brand-ink); font-weight: 700; font-size: .82re
 @media (max-width: 860px) { body.dm .services-grid, body.dm .services-grid:has(> :nth-child(4):last-child) { grid-template-columns: 1fr; } }
 body.dm section.section:has(+ section.cta-banner), body.dm section.section:has(+ section.cta-section) { padding-bottom: 56px; }
 @media (max-width: 640px) { body.dm section.section:has(+ section.cta-banner) { padding-bottom: 32px; } body.dm section.cta-banner { padding-top: 56px !important; } }
+
+/* ===== Round 3 phone + tablet (2026-10-01). Everything below sits in max-width queries; desktop (>1100px) is untouched. ===== */
+@media (max-width: 1100px) {
+  /* the 7-link desktop nav crowds the phone button at 1024, so tablets use the existing menu; 44px logo, phone, breadcrumbs */
+  body.dm .site-header .logo { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm .site-header .nav-links { display: none; }
+  body.dm li > a[href^="tel"] { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm .site-header .header-phone { min-height: 44px; white-space: nowrap; margin-left: auto; margin-right: 8px; }
+  body.dm .site-header .hamburger { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-width: 44px; min-height: 44px; padding: 0; }
+  body.dm .breadcrumb { align-items: center; }
+  body.dm .breadcrumb li { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm .breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 960px) {
+  /* floating call / quote circles stay visible on phones and tablets so a call action is always on screen */
+  body.dm .floating-cta { transform: none; opacity: 1; pointer-events: auto; }
+}
+@media (max-width: 640px) {
+  body.dm :is(.footer-about p, .footer-bottom p, .blog-card-body p, .hero-sub, .pricing-card p, .trust-item p, .sidebar-card p, .why-list p) { font-size: 15px !important; }
+}
