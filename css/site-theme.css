@@ -61,3 +61,30 @@ main table,
   margin-bottom: 2.5rem;
 }
 .testimonial-section .testimonial-quote { font-style: normal !important; }
+
+/* ===== Design check 2026-10-07 ===== */
+/* Phone menu: the fixed Call Now / Free Quote bar covered the last menu links (Contact and the phone line) */
+@media (max-width: 768px) {
+  .mobile-nav.open { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+}
+/* Service pages: 60px top and bottom padding on every content block doubled the gap between sections */
+body.dm .service-detail-grid .content-section { padding: 0 0 8px; }
+/* Main column: paragraphs and subheads ran together with no spacing */
+body.dm .service-detail-grid > div:first-child p + p,
+body.dm .service-detail-grid > div:first-child p + ul,
+body.dm .service-detail-grid > div:first-child ul + p { margin-top: .9rem; }
+body.dm .service-detail-grid > div:first-child h3 { margin-top: 1.5rem; margin-bottom: .4rem; }
+/* Blog index: the grid carried its own 115px padding inside an already padded section */
+body.dm .section > .container > .blog-grid { padding-top: 0; padding-bottom: 0; }
+/* Contact page: the trust lines were dark grey on navy (1.7:1) */
+body.dm .contact-info-box > div:last-child p { color: rgba(255, 255, 255, .92); }
+/* Location sidebar estimate card: white text on light blue measured 3.2:1; use the brand violet */
+body.dm aside .sidebar-card[style*="background:var(--accent)"] { --accent: #6d28d9; }
+/* Privacy and terms: list-style breadcrumb showed a bullet and no separator */
+body.dm .dm-hero ul.breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+body.dm .dm-hero ul.breadcrumb li { color: rgba(255, 255, 255, .72); }
+body.dm .dm-hero ul.breadcrumb li + li::before { content: "/"; margin-right: 6px; color: rgba(255, 255, 255, .5); }
+/* Thank-you page: the page icon rule (4rem, green) also hit the button icon */
+.thank-you-page .btn i { font-size: 1.1em; color: inherit; margin: 0; display: inline-block; }
+.thank-you-page p { margin-left: auto; margin-right: auto; }
+body.dm aside .sidebar-card[style*="background:var(--accent)"] .btn-primary { background: var(--cta, #f6b13c) !important; border-color: var(--cta, #f6b13c) !important; color: var(--cta-ink, #1a1a2e) !important; }
