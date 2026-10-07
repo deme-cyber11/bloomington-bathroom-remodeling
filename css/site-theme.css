@@ -88,3 +88,5 @@ body.dm .dm-hero ul.breadcrumb li + li::before { content: "/"; margin-right: 6px
 .thank-you-page .btn i { font-size: 1.1em; color: inherit; margin: 0; display: inline-block; }
 .thank-you-page p { margin-left: auto; margin-right: auto; }
 body.dm aside .sidebar-card[style*="background:var(--accent)"] .btn-primary { background: var(--cta, #f6b13c) !important; border-color: var(--cta, #f6b13c) !important; color: var(--cta-ink, #1a1a2e) !important; }
+/* Location sidebar: "Serving 10+ cities" line was light gray on white (2.1:1) */
+body.dm aside .sidebar-card p[style*="gray-500"] { color: #5b6470 !important; }
